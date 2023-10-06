@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/40746914ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="sect1">
+      <button class="show-modal">Add a new user</button>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1 id="modalFormHeader">Fill the required form</h1>
+        <form action="#" id="form">
+          <div class="inputDiv">
+            <label for="id">id</label>
+            <input type="text" id="id" name="id" class="inpEl" />
+          </div>
+          <div class="inputDiv">
+            <label for="firstName">first name</label>
+            <input type="text" id="firstName" name="firstName" class="inpEl" />
+          </div>
+          <div class="inputDiv">
+            <label for="lastName">last name</label>
+            <input type="text" id="lastName" name="lastName" class="inpEl" />
+          </div>
+          <div class="inputDiv">
+            <label for="salary">salary</label>
+            <input type="text" id="salary" name="salary" class="inpEl" />
+          </div>
+          <button id="submitbtn" class="btn submitbtn">Save</button>
+          <button id="btnEdit" class="btn editbtn hidden">Save Edited</button>
+          <button id="btnDel" class="btn deletetbtn hidden">Delete</button>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+    </section>
+    <section id="sect2">
+      <table id="userTable">
+        <caption>
+          User Datas
+        </caption>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>salary</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+        <tfoot id="tableFoot">
+          <tr>
+            <td colspan="3">Total Salary</td>
+            <td colspan="3" id="sum"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <script src="active.js"></script>
+  </body>
+</html>
